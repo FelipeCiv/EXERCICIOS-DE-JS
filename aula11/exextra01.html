@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Lanche</title>
+    <style>
+        body{
+            font: normal 15pt Arial;
+        }
+        input#button{
+            margin-top: 16px;
+            font-size: 20px;
+            color: white;
+            background: red;
+            border-radius: 8px;
+            border: solid gray 1px;
+        }
+       
+    </style>
+</head>
+<body>
+        <h1>-Peça seu Lanche e sua Bebida-</h1>
+        <p>Qual o nome do lanche?</p>
+
+        <input type="text" name="subway" id="subway">
+        <p>Qual sua Bebida?</p>
+
+        <input type="text" name="drink" id="drink"> <br>
+        <input id="button" type="button" value="CONFIRMAR" onclick="averiguar()"> 
+
+        <p>Pedido:</p>
+        <div id="order"></div>
+
+        <script>
+            function averiguar (){
+                var sub = window.document.getElementById('subway').value
+                var dri = window.document.getElementById('drink').value
+                var ord = window.document.getElementById('order')
+                
+                ord.innerHTML=`seu pedido foi um <strong>${sub}</strong> e um(a) <strong>${dri}</strong>, chegará na sua casa em breve! `
+            }
+        
+
+        </script>
+    </h1>
+</body>
+</html>

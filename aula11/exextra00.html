@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu país?</title>
+</head>
+
+<body>
+        <h1>Qual Seu país?</h1>
+        <input type="text" name="pais" id="pais">
+        <input type="button" value="Analisar" onclick = "checkInfo()" id="anl"> <p>Resultado:</p> 
+        <div id="res"></div>
+        
+        <script>
+            function checkInfo(){
+            var country = window.document.getElementById ('pais').value
+            var res = window.document.getElementById('res')
+            if(country === 'Brasil'){
+                res.innerHTML='Brasileiro'
+            }else{
+                res.innerHTML='Estrangeiro'
+            }
+        }
+
+
+
+        </script>
+</body>
+</html>
